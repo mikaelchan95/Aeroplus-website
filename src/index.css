@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-raleway text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-raleway font-bold;
+  }
+}
+
+@layer components {
+  .page-wrapper {
+    @apply min-h-screen flex flex-col;
+  }
+
+  .page-content {
+    @apply flex-grow;
+  }
+
+  .hero-section {
+    @apply relative min-h-screen flex items-center bg-navy-900;
+  }
+
+  .nav-link {
+    @apply text-white/80 hover:text-white transition-colors font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-white;
+  }
+
+  .fixed-navbar {
+    @apply fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md shadow-lg transition-all duration-300;
+  }
+}
